@@ -43,8 +43,8 @@ const MapViewer = ({ markerList, setMarkerList}) =>{
                <div onContextMenu={onRightBtn} className="container">
                 <img src={MAP} alt="지도" draggable className="test"/>
                 {
-                    markerList.length > 0 && markerList.map((v)=>{
-                        return <MapMarker x={v.x} y={v.y} />
+                    markerList.length > 0 && markerList.map((v, i)=>{
+                        return <MapMarker key={i} x={v.x} y={v.y} />
                     })
                 }
                </div>
